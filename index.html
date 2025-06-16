@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhi Shelke - Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero-text h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 400;
+        }
+
+        /* Black Box Section */
+        .black-box-section {
+            background-color: #000;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .black-box-section h3 {
+            font-size: 80px;
+            font-weight: 400;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .black-box-section span {
+            font-size: 96px;
+            color: white;
+        }
+
+        /* Card Container Section */
+        .card-container-section {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            max-width: 340px;
+            height: 400px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* Bottom Section */
+        .bottom-section {
+            display: flex;
+            min-height: 400px;
+        }
+
+        .contact-section {
+            flex: 1;
+            background-color: #dc3545;
+            color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-section {
+            flex: 1;
+            background-color: #28a745;
+            color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bottom-section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .bottom-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 786px) {
+            .hero-section {
+                min-height: 50vh;
+            }
+
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .black-box-section h3 {
+                font-size: 24px;
+            }
+
+            .black-box-section span {
+                font-size: 32px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .bottom-section {
+                flex-direction: column;
+            }
+
+            .contact-section,
+            .about-section {
+                padding: 40px 20px;
+            }
+
+            .bottom-section h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h2>Hi, I am Abhi Shelke</h2>
+            <h1>a Full Stack Developer</h1>
+        </div>
+    </section>
+
+    <!-- Black Box Section -->
+    <section class="black-box-section">
+        <h3>Work, I can do for <span>YOU</span></h3>
+    </section>
+
+    <!-- Card Container Section -->
+    <section class="card-container-section">
+        <div class="cards-grid">
+            <div class="grid-item">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80" alt="Web Development">
+                    <div class="card-content">
+                        <h3>Web Development</h3>
+                        <p>Creating responsive websites using HTML, CSS, JavaScript, and Bootstrap. I design smooth, animated, and user-friendly interfaces for portfolios, invitations, and more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Spring Boot & Backend">
+                    <div class="card-content">
+                        <h3>Spring Boot Projects</h3>
+                        <p>Developing robust backends using Spring Boot, MySQL, and Spring Security. Projects include registration/login systems, traffic violation portals, and GitHub data tracking platforms.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1415&q=80" alt="Streamlit & Python">
+                    <div class="card-content">
+                        <h3>Python & Streamlit</h3>
+                        <p>Creating data dashboards and analysis tools using Streamlit and MongoDB. Projects include GitHub trackers and face recognition systems for photo history and comments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Section -->
+    <section class="bottom-section">
+        <div class="contact-section">
+            <h3>Contact Me</h3>
+            <p>Let's collaborate on innovative projects! Reach out to build smart web apps, backend systems, or interactive dashboards. I'm always open to exciting opportunities and new learning.</p>
+        </div>
+        <div class="about-section">
+            <h3>About Me</h3>
+            <p>I'm Abhi Shelke, a passionate BCA graduate and full-stack developer from Pune. I work with technologies like Spring Boot, MySQL, HTML/CSS, Streamlit, and Python. I enjoy solving real-world problems through code and always strive to improve my skills through projects and collaboration.</p>
+        </div>
+    </section>
+</body>
+</html>
